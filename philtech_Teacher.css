@@ -1,0 +1,793 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(#b40505 100%);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-link {
+    font: 'Arial', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    font-style: italic;
+    opacity: 0.95;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.enroll-btn {
+    background: linear-gradient(135deg, #8b0000 0%, #a00000 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.enroll-btn:hover {
+    background: linear-gradient(135deg, #a00000 0%, #b71c1c 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.enroll-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .hero-subtitle {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .hero-section {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        background-position: center;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .brand-name {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 26px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .enroll-btn {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f5f5;
+}
+
+/* Faculty Section */
+.faculty-section {
+    background-color: whitesmoke;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.faculty-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Faculty Title */
+.faculty-title {
+    color: #8b0000;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Decorative Line */
+.faculty-decorative-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 15px;
+}
+
+.line-left,
+.line-right {
+    width: 80px;
+    height: 2px;
+    background-color: #8b0000;
+}
+
+.decorative-element {
+    color: #8b0000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Faculty Grid */
+.faculty-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.faculty-card {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #8b6914, #a67c00);
+    position: relative;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.faculty-image1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.faculty-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.faculty-card:hover .faculty-image img {
+    transform: scale(1.05);
+}
+.faculty-image img[src=""] + ::before,
+.faculty-image img:not([src]) + ::before {
+    content: 'Faculty Photo';
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .faculty-row {
+        gap: 20px;
+    }
+    
+    .faculty-card {
+        width: 180px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faculty-title {
+        font-size: 28px;
+    }
+    
+    .faculty-row {
+        gap: 15px;
+        justify-content: space-around;
+    }
+    
+    .faculty-card {
+        width: 160px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faculty-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .faculty-card {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .faculty-title {
+        font-size: 40px;
+    }
+    
+    .line-left,
+    .line-right {
+        width: 60px;
+    }
+}
+
+/* Hymn Section */
+.hymn-section {
+    padding-bottom: 100px;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+.hymn-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+.hymn-title {
+    color: #8b0000;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hymn-decorative-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.hymn-decorative-line .line-left,
+.hymn-decorative-line .line-right {
+    height: 2px;
+    width: 100px;
+    background-color: #8b0000;
+}
+
+.hymn-decorative-line .decorative-symbol {
+    color: #8b0000;
+    font-size: 24px;
+}
+
+.hymn-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hymn-line {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.8;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    text-align: center;
+}
+
+.hymn-line.chorus {
+    font-weight: bold;
+    color: #8b0000;
+    margin: 10px 0;
+}
+
+.repeat-text,
+.coda-text {
+    color: #8b0000;
+    font-style: italic;
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.hymn-line.final {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #8b0000;
+}
+
+/* Responsive Design for Hymn Section */
+@media (max-width: 768px) {
+    .hymn-section {
+        padding: 60px 20px;
+        margin-top: 40px;
+    }
+
+    .hymn-container {
+        padding: 30px 20px;
+    }
+
+    .hymn-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .hymn-line {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hymn-decorative-line .line-left,
+    .hymn-decorative-line .line-right {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hymn-section {
+        padding: 40px 15px;
+        margin-top: 30px;
+    }
+
+    .hymn-container {
+        padding: 25px 15px;
+    }
+
+    .hymn-title {
+        font-size: 24px;
+    }
+
+    .hymn-line {
+        font-size: 14px;
+    }
+
+    .hymn-line.final {
+        font-size: 16px;
+    }
+
+    .hymn-decorative-line .line-left,
+    .hymn-decorative-line .line-right {
+        width: 40px;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    position: relative;
+    padding: 50px 0 30px;
+}
+
+/* Add this overlay to darken the background image slightly for better text readability */
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.footer-container {
+    position: relative;
+    z-index: 2; /* Keep content above the overlay */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Update the footer divider to be more visible */
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.6) 20%, 
+        rgba(255, 255, 255, 0.6) 80%, 
+        transparent 100%);
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-brand-name {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-tagline {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.footer-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.address-info {
+    margin-bottom: 20px;
+}
+
+.branch-address,
+.branch-location {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.campus-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 25px;
+}
+
+.campus-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.campus-location {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.campus-phone {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-icon {
+    font-size: 20px;
+    width: 28px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.contact-text {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.4) 80%, transparent 100%);
+    margin-bottom: 20px;
+}
+
+.copyright-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .footer-left {
+        align-items: center;
+    }
+    
+    .footer-right {
+        justify-content: center;
+    }
+    
+    .contact-info {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 40px 0 25px;
+    }
+    
+    .footer-container {
+        padding: 0 20px;
+    }
+    
+    .footer-content {
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .footer-brand-name {
+        font-size: 26px;
+    }
+    
+    .footer-tagline {
+        font-size: 13px;
+        text-align: center;
+    }
+    .address-info {
+        font-size: 14px;
+    }
+    
+    .campus-title {
+        font-size: 20px;
+    }
+}
+/* End of @media (max-width: 768px) */
+
+@media (max-width: 480px) {
+    .footer-section {
+        padding: 30px 0 20px;
+    }
+    
+    .footer-brand-name {
+        font-size: 22px;
+    }
+    
+    .footer-tagline {
+        font-size: 12px;
+    }
+    .footer-tagline {
+        font-size: 13px;
+    }
+    .campus-title {
+        font-size: 16px;
+    }
+
+    .copyright-text {
+        font-size: 14px;
+    }
+    
+    .contact-info {
+        gap: 15px;
+    }
+
+    .contact-item {
+        gap: 12px;
+    }
+}
